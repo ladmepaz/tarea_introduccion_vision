@@ -5,9 +5,7 @@ Created on Sat Oct  5 17:00:25 2024
 @author: jfrui
 """
 
-# Completa las funciones de abajo
-
-# Ejercicio 1: Completa la función de abajo de acuerdo a la descripción de los parámetros de entrada y salida
+# Completa las funciones de abajo de acuerdo a la descripción de los parámetros de entrada y salida
 
 import numpy as np
 from PIL import Image
@@ -89,30 +87,42 @@ def estadisticas_intensidad(arreglo_img):
 
 def estadisticas_por_canal(arreglo_img):
     """
-    Calcula el promedio y la desviación estándar de las intensidades por canal
-    en una imagen representada como un arreglo de NumPy.
+    Calcula el promedio y la desviación estándar de las intensidades de los píxeles
+    por canal en una imagen representada como un arreglo de NumPy.
+    
+    Si la imagen tiene un solo canal, calcula las estadísticas para ese canal.
+    Si la imagen tiene múltiples canales, calcula las estadísticas por canal.
     
     Parámetros:
-    arreglo_img (np.ndarray): Imagen representada como un arreglo de NumPy, con forma (alto, ancho, canales).
+    arreglo_img (np.ndarray): Imagen representada como un arreglo de NumPy.
     
     Retorna:
     dict: Diccionario con el promedio y la desviación estándar por canal.
     """
-    # Verificar que la imagen tenga al menos un canal
-    if len(arreglo_img.shape) < 3:
-        raise ValueError("La imagen debe tener al menos un canal para calcular estadísticas por canal.")
-    
-    # Inicializar el diccionario para almacenar los resultados por canal
-    resultados = {}
-    num_canales = arreglo_img.shape[2]
-    
-    # Calcular el promedio y la desviación estándar por canal
-    for canal in range(num_canales):
-        promedio = np.mean(arreglo_img[:, :, canal])
-        desviacion_estandar = np.std(arreglo_img[:, :, canal])
-        resultados[f'Canal_{canal+1}'] = {
-            'Promedio': promedio,
-            'Desviación Estándar': desviacion_estandar
+    # Verificar el número de dimensiones del arreglo
+    if len(arreglo_img.shape) == 2:
+        # Imagen de un solo canal
+        promedio = np.mean(arreglo_img)
+        desviacion_estandar = np.std(arreglo_img)
+        resultados = {
+            'Canal_1': {
+                'Promedio': promedio,
+                'Desviación Estándar': desviacion_estandar
+            }
         }
+    elif len(arreglo_img.shape) == 3:
+        # Imagen de múltiples canales
+        resultados = {}
+        num_canales = arreglo_img.shape[2]
+        
+        for canal in range(num_canales):
+            promedio = np.mean(arreglo_img[:, :, canal])
+            desviacion_estandar = np.std(arreglo_img[:, :, canal])
+            resultados[f'Canal_{canal+1}'] = {
+                'Promedio': promedio,
+                'Desviación Estándar': desviacion_estandar
+            }
+    else:
+        raise ValueError("El arreglo de imagen debe tener 2 o 3 dimensiones.")
     
     return resultados

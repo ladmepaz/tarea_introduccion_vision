@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "Test addition",
-      "run": "pytest tests/test_example.py",
-      "points": 5
+      "name": "Test leer_imagen",
+      "run": "pytest tests/test_func_leer_imagen.py",
+      "points": 1
     }
   ]
 }

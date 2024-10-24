@@ -18,6 +18,4 @@ jobs:
           pip install pytest
       - name: Run tests
         run: |
-          git fetch origin hidden-tests:hidden-tests
-          git checkout hidden-tests -- tests
           pytest

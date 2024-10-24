@@ -4,6 +4,26 @@
       "name": "Test leer_imagen",
       "run": "pytest tests/test_func_leer_imagen.py",
       "points": 1
+    },
+    {
+      "name": "Test obtener_info_imagen",
+      "run": "pytest tests/test_func_obtener_info_imagen.py",
+      "points": 1
+    },
+    {
+      "name": "Test imagen_a_arreglo",
+      "run": "pytest tests/test_func_imagen_a_arreglo.py",
+      "points": 1
+    },
+    {
+      "name": "Test estadisticas_intensidad",
+      "run": "pytest tests/test_func_estadisticas_intensidad.py",
+      "points": 1
+    },
+    {
+      "name": "Test estadisticas_por_canal",
+      "run": "pytest tests/test_func_estadisticas_por_canal.py",
+      "points": 1
     }
   ]
 }

@@ -9,9 +9,9 @@ Este repositorio contiene el código base para una serie de ejercicios de introd
 ## **Estructura del Repositorio**
 
 - **`codigo_estudiante.py`**: Archivo principal donde los estudiantes deben completar las funciones indicadas. Cada función tiene una descripción de los parámetros de entrada y salida, así como los objetivos de la implementación.
-- **`tests/`**: Carpeta que contiene los archivos de pruebas automáticas utilizando el paquete `pytest` para evaluar la correcta implementación de las funciones.
-- **`.github/workflows/ci.yml`**: Archivo de configuración de GitHub Actions para ejecutar las pruebas automáticamente cuando los estudiantes suban su código al repositorio.
-- **`autograding.json`**: Archivo de configuración para GitHub Classroom, que define las pruebas y los puntajes asignados para la evaluación automática.
+- **`tests/`**: Carpeta que contiene los archivos de pruebas automáticas utilizando el paquete `pytest` para evaluar la correcta implementación de las funciones. (No modificar).
+- **`.github/workflows/ci.yml`**: Archivo de configuración de GitHub Actions para ejecutar las pruebas automáticamente cuando los estudiantes suban su código al repositorio. (No modificar).
+- **`autograding.json`**: Archivo de configuración para GitHub Classroom, que define las pruebas y los puntajes asignados para la evaluación automática. (No modificar).
 
 ## **Descripción de las Funciones a Completar**
 
@@ -40,22 +40,6 @@ Este repositorio contiene el código base para una serie de ejercicios de introd
    - Parámetro de entrada: `arreglo_img` (arreglo de NumPy).
    - Retorna: Diccionario con el promedio y la desviación estándar por canal.
 
-## **Instrucciones**
-
-1. Clona este repositorio en tu máquina local:
-   ```bash
-   git clone <url-del-repositorio>
-   ```
-2. Abre el archivo `codigo_estudiante.py` y completa cada una de las funciones según las instrucciones proporcionadas.
-3. Para verificar tus soluciones localmente, ejecuta:
-   ```bash
-   pytest
-   ```
-4. Una vez que completes todas las funciones, sube los cambios al repositorio para que se realice la evaluación automática en GitHub Classroom.
-
-## **Pruebas Automáticas**
-
-El repositorio está configurado con GitHub Actions para ejecutar pruebas automáticas. Cada vez que subas cambios, se ejecutarán las pruebas correspondientes y se te notificará si alguna de ellas falla. Asegúrate de que todas las pruebas pasen antes de la entrega final.
 
 ## **Recursos Adicionales**
 
